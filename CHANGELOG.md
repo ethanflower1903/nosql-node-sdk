@@ -15,6 +15,14 @@ for-await-of loop.
 * Added NoSQLClient.precacheAuth() API to pre-create authorization signature
 before starting database operations, thus avoiding possible timeout errors
 when using Instance Principal.
+* Cloud only: support for on-demand tables
+  * Changes to TableLimits and addition of CapacityMode to specify on-demand tables
+* Existing row modification is made available in results when the operation fails
+  and the previous row is requested
+* On-premise only: support for setting Durability in write operations
+  * Added Durability class and methods to set Durability
+* Changes to allow the driver to work in the browser environment.
+* The SDK now detects the version of the server it's connected to  and adjusts its capabilities to match. This allows the SDK to communicate with servers that may only support an earlier protocol version, with the corresponding feature restrictions
 
 **Changed**
 
